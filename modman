@@ -1,0 +1,4 @@
+app/code/community/Experius/DPDShippingExtended
+app/design/frontend/base/default/layout/experius/dpdshippingextended.xml
+app/design/frontend/base/default/template/experius/dpdshippingextended
+app/etc/modules/Experius_DPDShippingExtended.xml
