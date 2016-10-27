@@ -7,9 +7,9 @@
 	</modules>
 	<global>
 		<helpers>
-			<dpdshippingextended>
+			<experius_dpdshippingextended>
 				<class>Experius_DPDShippingExtended_Helper</class>
-			</dpdshippingextended>
+			</experius_dpdshippingextended>
 		</helpers>
 		<models>
 			<experius_dpdshippingextended>
@@ -84,4 +84,11 @@
 			</checkout_cart_product_add_after>
 		</events>
 	</frontend>
+	<default>
+		<carriers>
+			<dpdparcelshops>
+				<change_api>1</change_api>
+			</dpdparcelshops>
+		</carriers>
+	</default>
 </config> 

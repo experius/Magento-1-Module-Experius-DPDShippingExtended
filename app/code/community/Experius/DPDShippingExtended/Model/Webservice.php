@@ -63,6 +63,8 @@ class Experius_DPDShippingExtended_Model_Webservice extends DPD_Shipping_Model_W
 			$response   = json_decode($result);
 			$data		= json_decode($result,true);
 			
+			Mage::log($data['data']['results'],0,'lewis.log',true);
+			
 			return $this->formatParcelShops($data['data']['results']);
 			
 		}else{

@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
+    <dpd_checkout_header>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/experius/dpdshippingextended/shipping.css</stylesheet>
+            </action>
+        </reference>
+    </dpd_checkout_header>
 	<checkout_onepage_shippingmethod>
 		<reference name="root">
 			<action method="setTemplate">
