@@ -2,3 +2,5 @@
 .gm-style-iw .content tr:first-child > td:first-child { display: none; }
 .gm-style-iw + div { top:15px !important; left: 90px !important; }
 .gm-style-iw .content .dotted-line .pointer { background: #212121; display: inline-block; padding: 7px 15px; border: 0; border-radius: 3px; color: #ffffff; cursor: pointer; font-size: 14px; font-weight: 600; line-height: 19px; text-align: center; vertical-align: middle; white-space: nowrap; transition: all 150ms linear; }
+.sp-methods #dpd .parcelshopwrapper ul .parcelshoplogo { float:left; height: 90px; }
+.sp-methods #dpd .parcelshopwrapper ul li { margin: 0px 0px;}
