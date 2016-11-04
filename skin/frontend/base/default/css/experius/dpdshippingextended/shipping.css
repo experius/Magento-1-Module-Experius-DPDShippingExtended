@@ -1,3 +1,4 @@
-.gm-style-iw { background: #ffffff; border: 1px solid #585b58; left: -110px !important; padding: 5px; top: 14px; width: 220px !important; }
+.gm-style-iw { border-radius: 10px !important; background: #ffffff; border: 1px solid #585b58; left: -110px !important; padding: 10px 5px !important; top: 14px; width: 220px !important; }
 .gm-style-iw .content tr:first-child > td:first-child { display: none; }
-.gm-style-iw + div { left: 95px !important; }
+.gm-style-iw + div { top:15px !important; left: 90px !important; }
+.gm-style-iw .content .dotted-line .pointer { background: #212121; display: inline-block; padding: 7px 15px; border: 0; border-radius: 3px; color: #ffffff; cursor: pointer; font-size: 14px; font-weight: 600; line-height: 19px; text-align: center; vertical-align: middle; white-space: nowrap; transition: all 150ms linear; }
