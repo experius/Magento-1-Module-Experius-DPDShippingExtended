@@ -33,7 +33,6 @@ class Experius_DPDShippingExtended_Model_Observer_Quote
     	if($attributeCode){
 	        $item = $observer->getEvent()->getQuoteItem();
 	        $item->setData('exclude_dpdpickup', $item->getProduct()->getData($attributeCode));
-	        $item->save();
 	        return $this;
     	}
     }
