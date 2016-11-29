@@ -19,7 +19,7 @@ class Experius_DPDShippingExtended_Model_Observer_Quote
 			$items = $observer->getEvent()->getCollection()->getData();
 			Mage::getSingleton('core/session')->setData('disable_dpdpickup', false);
 			foreach($items as $item){
-		        if($item['exclude_dpdpickup']) {
+		        if(key_exists('exclude_dpdpickup',$item) && $item['exclude_dpdpickup']) {
 					Mage::getSingleton('core/session')->setData('disable_dpdpickup', true);
 					break;
 				}	
