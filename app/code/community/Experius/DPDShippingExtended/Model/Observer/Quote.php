@@ -17,9 +17,9 @@ class Experius_DPDShippingExtended_Model_Observer_Quote
 		$attributeCode = Mage::getStoreConfig('carriers/dpdparcelshops/disable_attribute');
     	if($attributeCode && ($observer->getEvent()->getCollection() instanceof Mage_Sales_Model_Resource_Quote_Item_Collection) ) {
 			$items = $observer->getEvent()->getCollection()->getData();
-			Mage::getSingleton('core/session')->setData('disable_dpdpickup', false);
+			Mage::getSingleton('core/session')->setData ('disable_dpdpickup', false);
 			foreach($items as $item){
-		        if($item['exclude_dpdpickup']) {
+		        if(key_exists($attributeCode,$item) && $item[$attributeCode]) {
 					Mage::getSingleton('core/session')->setData('disable_dpdpickup', true);
 					break;
 				}	
@@ -32,8 +32,10 @@ class Experius_DPDShippingExtended_Model_Observer_Quote
     	$attributeCode = Mage::getStoreConfig('carriers/dpdparcelshops/disable_attribute');
     	if($attributeCode){
 	        $item = $observer->getEvent()->getQuoteItem();
-	        $item->setData('exclude_dpdpickup', $item->getProduct()->getData($attributeCode));
-	        $item->save();
+            $productId = $item->getProductId() ;
+            $resource = Mage::getResourceModel('catalog/product');
+            $value = $resource->getAttributeRawValue($productId, $attributeCode, Mage::app()->getStore());
+	        $item->setData($attributeCode,$value)->save();
 	        return $this;
     	}
     }

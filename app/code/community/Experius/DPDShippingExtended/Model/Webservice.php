@@ -29,6 +29,9 @@ class Experius_DPDShippingExtended_Model_Webservice extends DPD_Shipping_Model_W
 			$shop['isoAlpha2'] = $address['countryCode'];
 			$shop['zipCode'] = $address['postcode'];
 			$shop['street'] = $address['street'];
+			$shop['openLate'] = $parcelshop['openLate'];
+            $shop['openSaturday'] = $parcelshop['openSaturday'];
+            $shop['openSunday'] = $parcelshop['openSunday'];
 			$shops[] = (object)$shop;
 		}
 		return (object) array('parcelShop' => (object)$shops );
@@ -63,7 +66,6 @@ class Experius_DPDShippingExtended_Model_Webservice extends DPD_Shipping_Model_W
 			$response   = json_decode($result);
 			$data		= json_decode($result,true);
 			
-			Mage::log($data['data']['results'],0,'lewis.log',true);
 			
 			return $this->formatParcelShops($data['data']['results']);
 			
